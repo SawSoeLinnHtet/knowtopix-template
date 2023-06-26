@@ -1,0 +1,44 @@
+.form-input {
+    width:100%;
+    min-height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #354966;
+    border-radius: 7px;
+    position: relative;
+}
+
+.form-input img {
+    width:100%;
+    display:none;
+    opacity: .8;
+}
+
+.form-input input {
+    display:none;
+
+}
+.form-input label {
+    width: 100%;
+    display:flex;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0,0,0, 0.4);
+    padding-block: 20px;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+.form-input label .icon{
+    font-size: 30px;
+    color: green !important;
+}
+
+.form-input label span{
+    font-size: 15px;
+    color: #fff;
+}
