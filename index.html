@@ -118,7 +118,7 @@
             </aside>
             <main>
                 <div class="content-wrap">
-                    <div class="main-wrap p-5">
+                    <div class="main-wrap p-5 px-3">
                         <h3 class="text-white">
                             Stories
                         </h3>
@@ -170,7 +170,7 @@
                         <div class="posts-wrap">
                             <div class="container-fluid p-0 py-5">
                                 <div class="row">
-                                    <div class="col-8">
+                                    <div class="col-12 col-lg-8 col-xl-8">
                                         <div class="add-post-btn-wrap" x-data="{ openCreateModalBox : false }">
                                             <button class="add-text-btn" @click="openCreateModalBox = !openCreateModalBox">What do you have in mind?</button>
                                             <button class="add-image-btn"><i class="fa-solid fa-image"></i></button>
@@ -439,7 +439,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-12 col-lg-4 col-xl-4">
                                         <div class="random-user-wrap">
                                             <div class="random-user-card-header">
                                                 <h6>
@@ -459,7 +459,7 @@
                                                         </span>
                                                     </div>
                                                     <button class="random-user-follow-btn">
-                                                        <i class="fa-solid fa-square-check"></i>
+                                                        <i class="fa-solid fa-user-plus"></i>
                                                     </button>
                                                 </div>
                                                 <div class="random-user">
@@ -471,7 +471,7 @@
                                                         </span>
                                                     </div>
                                                     <button class="random-user-follow-btn">
-                                                        <i class="fa-solid fa-square-check"></i>
+                                                        <i class="fa-solid fa-user-plus"></i>
                                                     </button>
                                                 </div>
                                                 <div class="random-user">
@@ -483,7 +483,7 @@
                                                         </span>
                                                     </div>
                                                     <button class="random-user-follow-btn">
-                                                        <i class="fa-solid fa-square-check"></i>
+                                                        <i class="fa-solid fa-user-plus"></i>
                                                     </button>
                                                 </div>
                                                 <div class="random-user">
@@ -495,7 +495,7 @@
                                                         </span>
                                                     </div>
                                                     <button class="random-user-follow-btn">
-                                                        <i class="fa-solid fa-square-check"></i>
+                                                        <i class="fa-solid fa-user-plus"></i>
                                                     </button>
                                                 </div>
                                                 <div class="random-user">
@@ -507,7 +507,7 @@
                                                         </span>
                                                     </div>
                                                     <button class="random-user-follow-btn">
-                                                        <i class="fa-solid fa-square-check"></i>
+                                                        <i class="fa-solid fa-user-plus"></i>
                                                     </button>
                                                 </div>
                                                 <a href="" class="seemore-btn">See more</a>
@@ -673,8 +673,93 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="" class="seemore-btn">See more</a>
+                                                <a href="" class="seemore-btn">See more</a> 
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-0 col-xl-0 d-block d-lg-none d-xl-none">
+                                        <div class="responsive-menu-bar">
+                                            <ul>
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa-solid fa-house"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa-solid fa-flag"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        <i class="fa-solid fa-users"></i>
+                                                    </a>
+                                                </li>
+                                                <li style="position: relative;" x-data="{ openFloatProfile : false }">
+                                                    <div 
+                                                        class="profile-float-wrapper responsive"
+                                                        x-cloak x-show="openFloatProfile"
+                                                        @click.away="topicOpen = false" 
+                                                        x-transition:enter.duration.500ms
+                                                        x-transition:leave.duration.400ms
+                                                    >
+                                                        <div class="profile-float-detail">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <h5 class="profile-name">
+                                                                Saw Soe Linn Htet
+                                                            </h5>
+                                                            <span class="username">
+                                                                @hazelism
+                                                            </span>
+                                                            <div class="popular">
+                                                                <p class="following">
+                                                                    620K<span class="ms-1">Following</span>
+                                                                </p>
+                                                                <p class="followers">
+                                                                    28K<span class="ms-1">Followers</span>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="collection-wrapper">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="fa-solid fa-user me-3"></i><span class="fw-bold">Profile</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="fa-solid fa-bookmark me-3"></i><span>Upgrade</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="fa-solid fa-gear me-3"></i><span>Account Setting</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <i class="fa-solid fa-right-from-bracket me-3"></i><span>Logout</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        class="profile-responsive"
+                                                        style="cursor: pointer;"
+                                                        @click="openFloatProfile = !openFloatProfile" 
+                                                        @keydown.escape="openFloatProfile = false"    
+                                                    >
+                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -701,19 +786,19 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
-            spaceBetween: 2,
+            spaceBetween: 10,
             breakpoints: {
                 640: {
-                slidesPerView: 8,
-                spaceBetween: 10,
+                    slidesPerView: 8,
+                    spaceBetween: 10,
                 },
                 768: {
-                slidesPerView: 8,
-                spaceBetween: 10,
+                    slidesPerView: 8,
+                    spaceBetween: 10,
                 },
                 1024: {
-                slidesPerView: 8,
-                spaceBetween: 10,
+                    slidesPerView: 8,
+                    spaceBetween: 10,
                 },
             },
         });
@@ -733,13 +818,16 @@
             nav: true,
             responsive:{
                 0:{
-                    items:3
+                    items: 2
                 },
                 600:{
-                    items:2
+                    items: 1
                 },
                 1000:{
-                    items:1
+                    items: 1
+                },
+                1440:{
+                    items:2
                 }
             }
         })
