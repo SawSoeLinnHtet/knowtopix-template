@@ -886,6 +886,10 @@ ul li a{
         width: 100%;
     }
 
+    .posts-wrap{
+        padding-bottom: 30px;
+    }
+
     .main-wrap{
         width: 100%;
     }
