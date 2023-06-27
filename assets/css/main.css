@@ -41,6 +41,12 @@ ul li a{
     padding-left: 20px;
 }   
 
+.logo-img{
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
 .sidebar .sidebar-menu{
     width: 100%;
     padding-block: 10px;
@@ -830,13 +836,48 @@ ul li a{
 .add-story-btn p{
     display: block;
     font-size: 30px;
-    margin-top: 7px;
+    margin-top: 11px;
     color: #fff;
     margin-bottom: 0px !important;
 }
 
+@media (max-width: 1300px) {
+    .sidebar{
+        width: 80px;
+    }
 
-@media (max-width: 990px) {
+    .sidebar .site-logo-wrap{
+        padding-left: 15px;
+    }
+
+    .sidebar .site-logo-wrap .logo-img{
+        display: block;
+        background-color: #354966;
+    }
+
+    .sidebar .site-logo-wrap .site-logo{
+        display: none;
+    }
+
+    .sidebar .sidebar-menu ul li a{
+        text-align: center;
+    }
+
+    .sidebar .sidebar-menu ul li a span{
+        display: none;
+    }
+
+    .content-wrap{
+        width: calc(100% - 80px);
+    }
+
+
+    .profile-dropdown .wrapper .profile-name span{
+        display: none;   
+    }
+}
+
+@media (max-width: 995px) {
     .sidebar{
         display: none;
     }
@@ -855,12 +896,9 @@ ul li a{
     }
 
     .add-story-btn p{
-        font-size: 20px;
+        font-size: 23px;
         margin-top: 5px;
     }
 }
 
-@media (max-width: 460px) {
-
-}
 
