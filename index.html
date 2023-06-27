@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="assets/plugins/fontawesome/fontawesome-free-6.4.0-web/css/regular.css">
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.theme.default.min.css">
     
 </head>
 <body>
@@ -167,7 +170,7 @@
                         <div class="posts-wrap">
                             <div class="container-fluid p-0 py-5">
                                 <div class="row">
-                                    <div class="col-7">
+                                    <div class="col-8">
                                         <div class="add-post-btn-wrap" x-data="{ openCreateModalBox : false }">
                                             <button class="add-text-btn" @click="openCreateModalBox = !openCreateModalBox">What do you have in mind?</button>
                                             <button class="add-image-btn"><i class="fa-solid fa-image"></i></button>
@@ -177,10 +180,13 @@
                                                 class="post-create-modal-box" 
                                                 x-cloak x-show="openCreateModalBox"
                                                 @click.away="openCreateModalBox = false"
-                                                x-transition:enter.duration.500ms
-                                                x-transition:leave.duration.400ms
                                             >
-                                                <div class="modal-box-wrapper">
+                                                <div 
+                                                    class="modal-box-wrapper" 
+                                                    x-show="openCreateModalBox"
+                                                    x-transition:enter.duration.500ms
+                                                    x-transition:leave.duration.400ms
+                                                >
                                                     <div class="modal-box-contain">
                                                         <div class="modal-header">
                                                             <p></p>
@@ -433,8 +439,243 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-5">
-                                        Hi
+                                    <div class="col-4">
+                                        <div class="random-user-wrap">
+                                            <div class="random-user-card-header">
+                                                <h6>
+                                                    People You Might Know 
+                                                </h6>
+                                                <span>
+                                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                                </span>
+                                            </div>
+                                            <div class="random-user-card-list">
+                                                <div class="random-user">
+                                                    <div class="random-user-info">
+                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                        <span>
+                                                            Saw Soe Linn Htet
+                                                            <span class="reach">Followed By Jason</span>
+                                                        </span>
+                                                    </div>
+                                                    <button class="random-user-follow-btn">
+                                                        <i class="fa-solid fa-square-check"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="random-user">
+                                                    <div class="random-user-info">
+                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                        <span>
+                                                            Saw Soe Linn Htet
+                                                            <span class="reach">Followed By Jason</span>
+                                                        </span>
+                                                    </div>
+                                                    <button class="random-user-follow-btn">
+                                                        <i class="fa-solid fa-square-check"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="random-user">
+                                                    <div class="random-user-info">
+                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                        <span>
+                                                            Saw Soe Linn Htet
+                                                            <span class="reach">Followed By Jason</span>
+                                                        </span>
+                                                    </div>
+                                                    <button class="random-user-follow-btn">
+                                                        <i class="fa-solid fa-square-check"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="random-user">
+                                                    <div class="random-user-info">
+                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                        <span>
+                                                            Saw Soe Linn Htet
+                                                            <span class="reach">Followed By Jason</span>
+                                                        </span>
+                                                    </div>
+                                                    <button class="random-user-follow-btn">
+                                                        <i class="fa-solid fa-square-check"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="random-user">
+                                                    <div class="random-user-info">
+                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                        <span>
+                                                            Saw Soe Linn Htet
+                                                            <span class="reach">Followed By Jason</span>
+                                                        </span>
+                                                    </div>
+                                                    <button class="random-user-follow-btn">
+                                                        <i class="fa-solid fa-square-check"></i>
+                                                    </button>
+                                                </div>
+                                                <a href="" class="seemore-btn">See more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="random-user-wrap online-friend-wrap mt-3">
+                                            <div class="random-user-card-header">
+                                                <h6>
+                                                    Online Users
+                                                </h6>
+                                                <span>
+                                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                                </span>
+                                            </div>
+                                            <div class="user-online-list">
+                                                <ul>
+                                                    <li class="online-friend">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <span class="active-status">
+                                                                <i class="fa-solid fa-circle"></i>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="online-friend">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <span class="active-status">
+                                                                <i class="fa-solid fa-circle"></i>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="online-friend">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <span class="active-status">
+                                                                <i class="fa-solid fa-circle"></i>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="online-friend">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <span class="active-status">
+                                                                <i class="fa-solid fa-circle"></i>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="online-friend">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <span class="active-status">
+                                                                <i class="fa-solid fa-circle"></i>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="online-friend">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <span class="active-status">
+                                                                <i class="fa-solid fa-circle"></i>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="random-user-wrap online-friend-wrap mt-3">
+                                            <div class="random-user-card-header">
+                                                <h6>
+                                                    Online Users
+                                                </h6>
+                                                <span>
+                                                    <i class="fa-solid fa-arrows-rotate"></i>
+                                                </span>
+                                            </div>
+                                            <div class="pages-list">
+                                                <div class="owl-carousel owl-theme">
+                                                    <div class="item">
+                                                        <div class="pages-card">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <h6>
+                                                                Saw Soe Linn Htet
+                                                            </h6>
+                                                            <span>
+                                                                12K Followers
+                                                            </span>
+                                                            <button>
+                                                                Follow
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="pages-card">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <h6>
+                                                                Saw Soe Linn Htet
+                                                            </h6>
+                                                            <span>
+                                                                12K Followers
+                                                            </span>
+                                                            <button>
+                                                                Follow
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="pages-card">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <h6>
+                                                                Saw Soe Linn Htet
+                                                            </h6>
+                                                            <span>
+                                                                12K Followers
+                                                            </span>
+                                                            <button>
+                                                                Follow
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="pages-card">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <h6>
+                                                                Saw Soe Linn Htet
+                                                            </h6>
+                                                            <span>
+                                                                12K Followers
+                                                            </span>
+                                                            <button>
+                                                                Follow
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="pages-card">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <h6>
+                                                                Saw Soe Linn Htet
+                                                            </h6>
+                                                            <span>
+                                                                12K Followers
+                                                            </span>
+                                                            <button>
+                                                                Follow
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="pages-card">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                            <h6>
+                                                                Saw Soe Linn Htet
+                                                            </h6>
+                                                            <span>
+                                                                12K Followers
+                                                            </span>
+                                                            <button>
+                                                                Follow
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="seemore-btn">See more</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -444,7 +685,8 @@
             </main>
         </div>
     </div>
-
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- bootstrap -->
     <script src="./assets/plugins/bootstrap/bootstrap.min.js"></script>
     <!-- fontawesome -->
@@ -454,6 +696,7 @@
     <!-- Alpinejs -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Custom js -->
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -474,6 +717,7 @@
                 },
             },
         });
+
         function showPreview(event){
             if(event.target.files.length > 0){
                 var src = URL.createObjectURL(event.target.files[0]);
@@ -482,6 +726,23 @@
                 preview.style.display = "block";
             }
         }
+
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: true,
+            responsive:{
+                0:{
+                    items:3
+                },
+                600:{
+                    items:2
+                },
+                1000:{
+                    items:1
+                }
+            }
+        })
     </script>
 </body>
 </html>
