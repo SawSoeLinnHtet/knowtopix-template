@@ -19,7 +19,6 @@
     
 </head>
 <body>
-    
     <div class="main-content">
         <div class="container-fluid main-content-wrapper p-0">
             <aside>
@@ -68,7 +67,7 @@
                         <div 
                             class="profile-float-wrapper" 
                             x-cloak x-show="openFloatProfile"
-                            @click.away="topicOpen = false" 
+                            @click.away="openFloatProfile = false" 
                             x-transition:enter.duration.500ms
                             x-transition:leave.duration.400ms
                         >
@@ -107,7 +106,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="login.html">
                                             <i class="fa-solid fa-right-from-bracket me-3"></i><span>Logout</span>
                                         </a>
                                     </li>
@@ -705,7 +704,7 @@
                                                     <div 
                                                         class="profile-float-wrapper responsive"
                                                         x-cloak x-show="openFloatProfile"
-                                                        @click.away="topicOpen = false" 
+                                                        @click.away="openFloatProfile = false" 
                                                         x-transition:enter.duration.500ms
                                                         x-transition:leave.duration.400ms
                                                     >
@@ -781,57 +780,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- Alpinejs -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <!-- Custom js -->
+    <!-- owl carousel js -->
     <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Custom js -->
     <script src="./assets/js/main.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            breakpoints: {
-                640: {
-                    slidesPerView: 8,
-                    spaceBetween: 10,
-                },
-                768: {
-                    slidesPerView: 8,
-                    spaceBetween: 10,
-                },
-                1024: {
-                    slidesPerView: 8,
-                    spaceBetween: 10,
-                },
-            },
-        });
-
-        function showPreview(event){
-            if(event.target.files.length > 0){
-                var src = URL.createObjectURL(event.target.files[0]);
-                var preview = document.getElementById("file-ip-1-preview");
-                preview.src = src;
-                preview.style.display = "block";
-            }
-        }
-
-        $('.owl-carousel').owlCarousel({
-            loop: false,
-            margin: 10,
-            nav: true,
-            responsive:{
-                0:{
-                    items: 2
-                },
-                600:{
-                    items: 1
-                },
-                1000:{
-                    items: 1
-                },
-                1440:{
-                    items:2
-                }
-            }
-        })
-    </script>
 </body>
 </html>
