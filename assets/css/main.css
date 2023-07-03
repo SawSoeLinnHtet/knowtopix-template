@@ -905,4 +905,118 @@ ul li a{
     }
 }
 
+.friend_requests_wrap{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.request-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    padding-inline: 20px !important;
+}
+
+.request-card img{
+    width: 100%;
+    height: 180px;
+    border: 1px solid #354966;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.request-card .info-wrap{
+    padding-block: 10px;
+    background-color: #1a263a;
+    padding-inline: 10px;
+    border: 1px solid #354966;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.request-card .info-wrap .user-name{
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.request-card .info-wrap .user-name p{
+    margin-bottom: 0px !important;
+}
+
+.request-card .info-wrap .friend-count{
+    color: #f6f6f6;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.request-card .info-wrap button{
+    width: 100%;
+}
+
+.request-card .info-wrap button.accept-btn{
+    margin-bottom: 10px;
+    background-color: rgb(11, 107, 218);
+    color: #e2e2e2;
+    font-weight: bold;
+    border: none;
+    padding-block: 5px;
+    border-radius: 5px;
+}
+
+.request-card .info-wrap button.accept-btn:hover{
+    background-color: rgba(11, 107, 218,.5);
+}
+
+.request-card .info-wrap button.add-friend-btn{
+    margin-bottom: 10px;
+    background-color: rgba(11, 107, 218, .4);
+    color: #e2e2e2;
+    font-weight: bold;
+    border: none;
+    padding-block: 5px;
+    border-radius: 5px;
+}
+
+.request-card .info-wrap button.add-friend-btn:hover{
+    background-color: rgba(11, 107, 218, .7);
+}
+
+.request-card .info-wrap button.reject-btn{
+    background-color: #404140;
+    color: #e2e2e2;
+    font-weight: bold;
+    border: none;
+    padding-block: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+    .request-card{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        padding-inline: 20px !important;
+    }
+
+    .request-card img{
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .request-card .info-wrap{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+
+
 
