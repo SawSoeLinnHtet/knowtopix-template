@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/test.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/fontawesome-free-6.4.0-web/css/all.css"/>
+    <link rel="stylesheet" href="assets/plugins/fontawesome/fontawesome-free-6.4.0-web/css/regular.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.theme.default.min.css">
+    
+</head>
+<body>
+    <div class="main-content">
+        <div class="container-fluid main-content-wrapper p-0">
+            <aside>
+                <div class="sidebar">
+                    <div class="site-logo-wrap">
+                        <img src="./assets/img/logo.png" class="logo-img" alt="">
+                        <h3 class="site-logo">
+                            Knowtopix
+                        </h3>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li>
+                                <a href="./index.html">
+                                    <i class="fa-solid fa-house"></i><span class="ms-3">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./search.html">
+                                    <i class="fa-solid fa-magnifying-glass"></i><span class="ms-3">Search</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-flag"></i><span class="ms-3">Pages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./friends.html">
+                                    <i class="fa-solid fa-users"></i><span class="ms-3">Friends</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="profile-dropdown" x-data="{ openFloatProfile: false }">
+                        <div 
+                            class="wrapper" 
+                            @click="openFloatProfile = !openFloatProfile" 
+                            @keydown.escape="openFloatProfile = false"
+                        >
+                            <div class="profile-name">
+                                <img src="./assets/img/user.jpeg" alt="">
+                                <span>
+                                    Saw Soe Linn Htet
+                                </span>
+                            </div>
+                            <div class="drop-icon">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div 
+                            class="profile-float-wrapper" 
+                            x-cloak x-show="openFloatProfile"
+                            @click.away="openFloatProfile = false" 
+                            x-transition:enter.duration.500ms
+                            x-transition:leave.duration.400ms
+                        >
+                            <div class="profile-float-detail">
+                                <img src="./assets/img/user.jpeg" alt="">
+                                <h5 class="profile-name">
+                                    Saw Soe Linn Htet
+                                </h5>
+                                <span class="username">
+                                    @hazelism
+                                </span>
+                                <div class="popular">
+                                    <p class="following">
+                                        620K<span class="ms-1">Following</span>
+                                    </p>
+                                    <p class="followers">
+                                        28K<span class="ms-1">Followers</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="collection-wrapper">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-user me-3"></i><span class="fw-bold">Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-bookmark me-3"></i><span>Upgrade</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-gear me-3"></i><span>Account Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html">
+                                            <i class="fa-solid fa-right-from-bracket me-3"></i><span>Logout</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main>
+                <div class="content-wrap">
+                    <div class="main-wrap p-5 px-3">
+                        <div class="container px-0 px-lg-5 px-xl-5 py-3">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 col-xl-8 offset-0 offset-md-0 offset-lg-1 offset-xl-2" x-data="{ openProfileUpload : false }">
+                                    <div class="profile-setting-wrap">
+                                        <div class="img-holder">
+                                            <img src="./assets/img/user.jpeg" alt="">
+                                            <a
+                                                href="#"
+                                                @click="openProfileUpload = !openProfileUpload"
+                                            >
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </a>
+                                        </div>
+                                        <div class="name-info">
+                                            <h4>
+                                                Saw Soe Linn Htet
+                                            </h4>
+                                            <span>
+                                                @hazel
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div 
+                                        class="profile-upload-model-wrap" 
+                                        x-cloak x-show="openProfileUpload"
+                                        @click="openProfileUpload = !openProfileUpload"
+                                        @keyup.escape.window="openProfileUpload = false"
+                                    >
+                                        <div 
+                                            class="profile-upload-modal modal-form-wrap" 
+                                            x-show="openProfileUpload"
+                                            x-transition:enter.duration.500ms
+                                            x-transition:leave.duration.400ms
+                                        >
+                                            <form action="" method="post">
+                                                <div class="form-input">
+                                                    <div class="preview">
+                                                        <img id="file-ip-1-preview">
+                                                    </div>
+                                                    <label for="file-ip-1">
+                                                        <i class="fa-solid fa-image icon"></i>
+                                                        <span>Browse to Upload Image</span>
+                                                    </label>
+                                                    <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+                                                </div>
+                                                <div class="input-area">
+                                                    <button class="btn btn-sm btn-primary w-100">Upload</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="profile-setting-edit-wrap mt-2 py-4">
+                                        <h5 class="text-white pb-3 border-bottom border-1 border-white w-100">
+                                            General Edit
+                                        </h5>
+                                        <div class="form-container py-5">
+                                            <form action="">
+                                                <div class="row mb-3">
+                                                    <div class="col-3">
+                                                        <label for=""  class="text-white">Name</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="w-100">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-3">
+                                                        <label for=""  class="text-white">Username</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="w-100">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-3">
+                                                        <label for=""  class="text-white">Email</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="w-100">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-3">
+                                                        <label for=""  class="text-white">Phone</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="w-100">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-3">
+                                                        <label for=""  class="text-white">Gender</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                            <label class="form-check-label" for="inlineRadio2">Other</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-3">
+                                                        <label for=""  class="text-white">Address</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-3">
+                                                        <label for=""  class="text-white ">Email</label>
+                                                    </div>
+                                                    <div class="col">
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col d-flex justify-content-end">
+                                                        <button type="submit" class="btn btn-secondary">Sign in</button>
+                                                        <button type="submit" class="btn btn-primary ms-3">Sign in</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- fontawesome -->
+    <script src="assets/plugins/fontawesome/fontawesome-free-6.4.0-web/js/all.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Alpinejs -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- owl carousel js -->
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Custom js -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
