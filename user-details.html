@@ -204,6 +204,399 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-12 col-lg-10 col-xl-8 offset-0 offset-lg-1 offset-xl-1">
+                                    <div class="profile-setting-edit-wrap mt-2 py-4 px-4">
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <button class="nav-link tab-change-btn active" id="nav-posts-tab" data-bs-toggle="tab" data-bs-target="#nav-posts" type="button" role="tab" aria-controls="nav-posts" aria-selected="true">Posts</button>
+                                                <button class="nav-link tab-change-btn" id="nav-images-tab" data-bs-toggle="tab" data-bs-target="#nav-images" type="button" role="tab" aria-controls="nav-images" aria-selected="false">Photos</button>
+                                                <button class="nav-link tab-change-btn" id="nav-about-tab" data-bs-toggle="tab" data-bs-target="#nav-about" type="button" role="tab" aria-controls="nav-about" aria-selected="false">About</button>
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="nav-posts" role="tabpanel" aria-labelledby="nav-posts-tab">
+                                                <div class="row p-0">
+                                                    <div class="col-12">
+                                                        <div class="public-posts-wrap">
+                                                            <div class="public-post-card in-profile mb-3">
+                                                                <div class="card-header">
+                                                                    <div class="card-info">
+                                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                                        <div>
+                                                                            <a href="#">
+                                                                                <h4>Saw Soe Linn Htet</h4>
+                                                                            </a>
+                                                                            <div class="post-created">2 hours ago</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-option" x-data="{ openOption: false }">
+                                                                        <button 
+                                                                            @click="openOption= !openOption"
+                                                                            @keydown.escape="openOption= false"
+                                                                        >
+                                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                                        </button>
+                                                                        <div 
+                                                                            class="option-float-wrap" 
+                                                                            x-cloak x-show="openOption"
+                                                                            @click.away="openOption= false" 
+                                                                            x-transition:enter.duration.500ms
+                                                                            x-transition:leave.duration.400ms
+                                                                        >
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <a href="#">
+                                                                                        <i class="fa-regular fa-bookmark text-primary"></i><span class="fw-bold">Add To Favorites</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="#">
+                                                                                        <i class="fa-solid fa-square-check text-danger"></i><span class="fw-bold">Follow</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <div class="img-holder">
+                                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                                    </div>
+                                                                    <div class="card-body-option">
+                                                                        <div class="like-wrap me-3">
+                                                                            <button class="me-2">
+                                                                                <i class="fa-solid fa-heart"></i>
+                                                                            </button>
+                                                                            <span>
+                                                                                1380
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="comment-wrap">
+                                                                            <button class="me-2">
+                                                                                <i class="fa-solid fa-comment-dots"></i>
+                                                                            </button>
+                                                                            <span>
+                                                                                200
+                                                                            </span>
+                                                                        </div>
+                                                                        <button class="normal-btn ms-auto">
+                                                                            <i class="fa-regular fa-share-from-square"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-footer">
+                                                                    <div class="comments-wrap">
+                                                                        <div class="comment-card">
+                                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                                            <div class="text-wrap">
+                                                                                <h6>
+                                                                                    Saw Soe Linn Htet
+                                                                                </h6>
+                                                                                <span>
+                                                                                    You captured the moment.😎
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="comment-card">
+                                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                                            <div class="text-wrap">
+                                                                                <h6>
+                                                                                    Saw Soe Linn Htet
+                                                                                </h6>
+                                                                                <span>
+                                                                                    You captured the moment.😎
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="" class="more-comment-btn">
+                                                                            <i class="fa-solid fa-angle-down"></i> More Comment
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="create-comment-wrap">
+                                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                                        <div class="comment-form-wrap">
+                                                                            <textarea name="" id="" rows="1" placeholder="Add Comment..."></textarea>
+                                                                            <button>
+                                                                                <i class="fa-solid fa-paper-plane"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="public-post-card in-profile mb-3">
+                                                                <div class="card-header">
+                                                                    <div class="card-info">
+                                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                                        <div>
+                                                                            <a href="#">
+                                                                                <h4>Saw Soe Linn Htet</h4>
+                                                                            </a>
+                                                                            <div class="post-created">2 hours ago</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="card-option" x-data="{ openOption: false }">
+                                                                        <button 
+                                                                            @click="openOption= !openOption"
+                                                                            @keydown.escape="openOption= false"
+                                                                        >
+                                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                                        </button>
+                                                                        <div 
+                                                                            class="option-float-wrap" 
+                                                                            x-show="openOption"
+                                                                            x-cloak 
+                                                                            @click.away="openOption= false" 
+                                                                            x-transition:enter.duration.500ms
+                                                                            x-transition:leave.duration.400ms
+                                                                        >
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <a href="#">
+                                                                                        <i class="fa-regular fa-bookmark text-primary"></i><span class="fw-bold">Add To Favorites</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="#">
+                                                                                        <i class="fa-solid fa-square-check text-danger"></i><span class="fw-bold">Follow</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <div class="content-holder">
+                                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas adipisci pariatur id nam blanditiis est molestiae labore, accusantium ratione quis reiciendis provident. Quaerat ratione iste, itaque nisi dignissimos eaque pariatur?
+                                                                    </div>
+                                                                    <!-- <div class="img-holder">
+                                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                                    </div> -->
+                                                                    <div class="card-body-option">
+                                                                        <div class="like-wrap me-3">
+                                                                            <button class="me-2">
+                                                                                <i class="fa-solid fa-heart"></i>
+                                                                            </button>
+                                                                            <span>
+                                                                                1380
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="comment-wrap">
+                                                                            <button class="me-2">
+                                                                                <i class="fa-solid fa-comment-dots"></i>
+                                                                            </button>
+                                                                            <span>
+                                                                                200
+                                                                            </span>
+                                                                        </div>
+                                                                        <button class="normal-btn ms-auto">
+                                                                            <i class="fa-regular fa-share-from-square"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-footer">
+                                                                    <div class="comments-wrap">
+                                                                        <div class="comment-card">
+                                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                                            <div class="text-wrap">
+                                                                                <h6>
+                                                                                    Saw Soe Linn Htet
+                                                                                </h6>
+                                                                                <span>
+                                                                                    You captured the moment.😎
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="comment-card">
+                                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                                            <div class="text-wrap">
+                                                                                <h6>
+                                                                                    Saw Soe Linn Htet
+                                                                                </h6>
+                                                                                <span>
+                                                                                    You captured the moment.😎
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="" class="more-comment-btn">
+                                                                            <i class="fa-solid fa-angle-down"></i> More Comment
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="create-comment-wrap">
+                                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                                        <div class="comment-form-wrap">
+                                                                            <textarea name="" id="" rows="1" placeholder="Add Comment..."></textarea>
+                                                                            <button>
+                                                                                <i class="fa-solid fa-paper-plane"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-images" role="tabpanel" aria-labelledby="nav-images-tab">
+                                                <div class="row py-4 profile-photos">
+                                                    <div class="col-4 col-md-3 col-lg-4 col-xl-3 p-1 profile-photos-wrap">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 col-lg-4 col-xl-3 p-1 profile-photos-wrap">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 col-lg-4 col-xl-3 p-1 profile-photos-wrap">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 col-lg-4 col-xl-3 p-1 profile-photos-wrap">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 col-lg-4 col-xl-3 p-1 profile-photos-wrap">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 col-md-3 col-lg-4 col-xl-3 p-1 profile-photos-wrap">
+                                                        <a href="">
+                                                            <img src="./assets/img/user.jpeg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                                                <div class="row p-3 mt-3">
+                                                    <div class="d-flex flex-column mb-3">
+                                                        <span class="fw-bold text-light fs-5">
+                                                            Career & Job
+                                                        </span>
+                                                        <span class="mt-2 text-info">
+                                                           <i class="fa-solid fa-briefcase me-3 text-white"></i> Web Developer
+                                                        </span>
+                                                    </div>
+                                                    <div class="d-flex flex-column mb-3">
+                                                        <span class="fw-bold text-light fs-5">
+                                                            Contact Info
+                                                        </span>
+                                                        <span class="mt-2 text-info">
+                                                            <i class="fa-solid fa-phone text-white me-3"></i> 09962569030
+                                                        </span>
+                                                        <span class="mt-2 text-info">
+                                                            <i class="fa-solid fa-envelope me-3 text-white"></i> hazel@gmail.com
+                                                        </span>
+                                                    </div>
+                                                    <div class="d-flex flex-column mb-3">
+                                                        <span class="fw-bold text-light fs-5">
+                                                            Gender
+                                                        </span>
+                                                        <span class="mt-2 text-info">
+                                                            <i class="fa-solid fa-venus-mars me-3 text-white"></i> Male
+                                                        </span>
+                                                    </div>
+                                                    <div class="d-flex flex-column mb-3">
+                                                        <span class="fw-bold text-light fs-5">
+                                                            Popularity
+                                                        </span>
+                                                        <span class="mt-2 text-info">
+                                                            <i class="fa-solid fa-star me-3 text-white"></i> 2.3
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-0 col-xl-0 d-block d-lg-none d-xl-none">
+                                    <div class="responsive-menu-bar">
+                                        <ul>
+                                            <li>
+                                                <a href="">
+                                                    <i class="fa-solid fa-house"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="">
+                                                    <i class="fa-solid fa-flag"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./friends.html">
+                                                    <i class="fa-solid fa-users"></i>
+                                                </a>
+                                            </li>
+                                            <li style="position: relative;" x-data="{ openFloatProfile : false }">
+                                                <div 
+                                                    class="profile-float-wrapper responsive"
+                                                    x-cloak x-show="openFloatProfile"
+                                                    @click.away="openFloatProfile = false" 
+                                                    x-transition:enter.duration.500ms
+                                                    x-transition:leave.duration.400ms
+                                                >
+                                                    <div class="profile-float-detail">
+                                                        <img src="./assets/img/user.jpeg" alt="">
+                                                        <h5 class="profile-name">
+                                                            Saw Soe Linn Htet
+                                                        </h5>
+                                                        <span class="username">
+                                                            @hazelism
+                                                        </span>
+                                                        <div class="popular">
+                                                            <p class="following">
+                                                                620K<span class="ms-1">Following</span>
+                                                            </p>
+                                                            <p class="followers">
+                                                                28K<span class="ms-1">Followers</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="collection-wrapper">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-user me-3"></i><span class="fw-bold">Profile</span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-bookmark me-3"></i><span>Upgrade</span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fa-solid fa-gear me-3"></i><span>Account Setting</span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="./login.html">
+                                                                    <i class="fa-solid fa-right-from-bracket me-3"></i><span>Logout</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a
+                                                    class="profile-responsive"
+                                                    style="cursor: pointer;"
+                                                    @click="openFloatProfile = !openFloatProfile" 
+                                                    @keydown.escape="openFloatProfile = false"    
+                                                >
+                                                    <img src="./assets/img/user.jpeg" alt="">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
