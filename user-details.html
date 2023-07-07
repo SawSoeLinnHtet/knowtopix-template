@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/test.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/plugins/bootstrap/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="assets/plugins/fontawesome/fontawesome-free-6.4.0-web/css/all.css"/>
+    <link rel="stylesheet" href="assets/plugins/fontawesome/fontawesome-free-6.4.0-web/css/regular.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.theme.default.min.css">
+    
+</head>
+<body>
+    <div class="main-content">
+        <div class="container-fluid main-content-wrapper p-0">
+            <aside>
+                <div class="sidebar">
+                    <div class="site-logo-wrap">
+                        <img src="./assets/img/logo.png" class="logo-img" alt="">
+                        <h3 class="site-logo">
+                            Knowtopix
+                        </h3>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li>
+                                <a href="./index.html">
+                                    <i class="fa-solid fa-house"></i><span class="ms-3">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./search.html">
+                                    <i class="fa-solid fa-magnifying-glass"></i><span class="ms-3">Search</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fa-solid fa-flag"></i><span class="ms-3">Pages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./friends.html">
+                                    <i class="fa-solid fa-users"></i><span class="ms-3">Friends</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="profile-dropdown" x-data="{ openFloatProfile: false }">
+                        <div 
+                            class="wrapper" 
+                            @click="openFloatProfile = !openFloatProfile" 
+                            @keydown.escape="openFloatProfile = false"
+                        >
+                            <div class="profile-name">
+                                <img src="./assets/img/user.jpeg" alt="">
+                                <span>
+                                    Saw Soe Linn Htet
+                                </span>
+                            </div>
+                            <div class="drop-icon">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div 
+                            class="profile-float-wrapper" 
+                            x-cloak x-show="openFloatProfile"
+                            @click.away="openFloatProfile = false" 
+                            x-transition:enter.duration.500ms
+                            x-transition:leave.duration.400ms
+                        >
+                            <div class="profile-float-detail">
+                                <img src="./assets/img/user.jpeg" alt="">
+                                <h5 class="profile-name">
+                                    Saw Soe Linn Htet
+                                </h5>
+                                <span class="username">
+                                    @hazelism
+                                </span>
+                                <div class="popular">
+                                    <p class="following">
+                                        620K<span class="ms-1">Following</span>
+                                    </p>
+                                    <p class="followers">
+                                        28K<span class="ms-1">Followers</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="collection-wrapper">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-user me-3"></i><span class="fw-bold">Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-bookmark me-3"></i><span>Upgrade</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-gear me-3"></i><span>Account Setting</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html">
+                                            <i class="fa-solid fa-right-from-bracket me-3"></i><span>Logout</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main>
+                <div class="content-wrap">
+                    <div class="main-wrap p-5 px-3">
+                        <div class="container-fluid px-0 px-lg-2 px-xl-2 py-3">
+                            <div class="row px-0">
+                                <div class="col-12 col-lg-10 col-xl-10 offset-0 offset-lg-1 offset-xl-1">
+                                    <div class="profile-header w-100">
+                                        <div class="d-flex gap-3 justify-content-between">
+                                            <div class="img-holder">
+                                                <div class="inner-border">
+                                                    <img src="./assets/img/user.jpeg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="popularity-inner-img d-flex align-items-center justify-content-around gap-3 d-md-none d-lg-none d-xl-none">
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <span class="text-light">
+                                                        Posts
+                                                    </span>
+                                                    <span class="text-white fw-bold fs-5">
+                                                        13
+                                                    </span>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <span class="text-light">
+                                                        Followers
+                                                    </span>
+                                                    <span class="text-white fw-bold fs-5">
+                                                        159
+                                                    </span>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <span class="text-light">
+                                                        Friends
+                                                    </span>
+                                                    <span class="text-white fw-bold fs-5">
+                                                        123
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header-info">
+                                            <h4 class="name">Saw Soe Linn Htet</h4>
+                                            <span class="username">@hazel</span>
+                                            <span class="personal-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ducimus, at incidunt ipsum vitae voluptatem corporis! Error suscipit.</span>
+                                            <div class="profile-option d-flex align-items-center justify-content-between mt-3">
+                                                <div class="popularity d-lg-flex d-md-flex d-xl-flex align-items-center justify-content-around gap-3 d-none d-none">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <span class="text-light">
+                                                            Posts
+                                                        </span>
+                                                        <span class="text-white fw-bold fs-5">
+                                                            13
+                                                        </span>
+                                                    </div>
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <span class="text-light">
+                                                            Followers
+                                                        </span>
+                                                        <span class="text-white fw-bold fs-5">
+                                                            159
+                                                        </span>
+                                                    </div>
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <span class="text-light">
+                                                            Friends
+                                                        </span>
+                                                        <span class="text-white fw-bold fs-5">
+                                                            123
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="options">
+                                                    <button class="unfollow-btn me-3">
+                                                        Unfollow
+                                                    </button>
+                                                    <button class="edit-btn">
+                                                        Edit profile
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="./assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- fontawesome -->
+    <script src="assets/plugins/fontawesome/fontawesome-free-6.4.0-web/js/all.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Alpinejs -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- owl carousel js -->
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Custom js -->
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        $(function(){
+            $('.show-pass-btn').on('change', function () {
+                if($(this).is(':checked')){
+                    return $('input:password').attr('type', 'text');
+                }else{
+                    return $('input:text').attr('type', 'password');
+                }
+            })
+        })
+    </script>
+</body>
+</html>

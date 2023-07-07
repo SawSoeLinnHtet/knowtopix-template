@@ -127,6 +127,12 @@
                         <div class="container px-0 px-lg-5 px-xl-5 py-3">
                             <div class="row">
                                 <div class="col-12 col-lg-8 col-xl-8 offset-0 offset-md-0 offset-lg-1 offset-xl-2" x-data="{ openProfileUpload : false }">
+                                    <div class="setting-title">
+                                        <a href="" class="btn text-primary ps-0 mb-3 text-decoration-none"><i class="fa-solid fa-chevron-left me-2"></i> Back</a>
+                                        <h2 class="text-white mb-4">
+                                            Settings
+                                        </h2>
+                                    </div>
                                     <div class="profile-setting-wrap">
                                         <div class="img-holder">
                                             <img src="./assets/img/user.jpeg" alt="">
@@ -176,85 +182,139 @@
                                         </div>
                                     </div>
                                     <div class="profile-setting-edit-wrap mt-2 py-4">
-                                        <h5 class="text-white pb-3 border-bottom border-1 border-white w-100">
-                                            General Edit
-                                        </h5>
-                                        <div class="form-container py-5">
-                                            <form action="">
-                                                <div class="row mb-3">
-                                                    <div class="col-3">
-                                                        <label for=""  class="text-white">Name</label>
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="w-100">
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <div class="col-3">
-                                                        <label for=""  class="text-white">Username</label>
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="w-100">
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <div class="col-3">
-                                                        <label for=""  class="text-white">Email</label>
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="w-100">
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <div class="col-3">
-                                                        <label for=""  class="text-white">Phone</label>
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="w-100">
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-3">
-                                                    <div class="col-3">
-                                                        <label for=""  class="text-white">Gender</label>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <button class="nav-link tab-change-btn active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">General</button>
+                                                <button class="nav-link tab-change-btn" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Password</button>
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                <div class="form-container py-5">
+                                                    <form action="">
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for=""  class="text-white">Name</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <input type="text" class="w-100" name="name">
+                                                            </div>
                                                         </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for=""  class="text-white">Username</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <input type="text" class="w-100" name="username">
+                                                            </div>
                                                         </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                            <label class="form-check-label" for="inlineRadio2">Other</label>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for=""  class="text-white">Email</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <input type="text" class="w-100" name="email">
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for=""  class="text-white">Phone</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <input type="text" class="w-100" name="phone">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for=""  class="text-white">Gender</label>
+                                                            </div>
+                                                            <div class="col">
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input shadow-none" type="radio" name="gender" id="inlineRadio1" value="1">
+                                                                    <label class="form-check-label text-white" for="inlineRadio1">Male</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input shadow-none" type="radio" name="gender" id="inlineRadio2" value="2">
+                                                                    <label class="form-check-label text-white" for="inlineRadio2">Female</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input shadow-none" type="radio" name="gender" id="inlineRadio2" value="3">
+                                                                    <label class="form-check-label text-white" for="inlineRadio2">Other</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for=""  class="text-white">Address</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for=""  class="text-white ">Email</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col d-flex justify-content-end">
+                                                                <button type="submit" class="btn btn-secondary">Cancel</button>
+                                                                <button type="submit" class="btn btn-primary profile-edit-btn ms-3">Edit</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </div>
-                                                <div class="row mb-3">
-                                                    <div class="col-3">
-                                                        <label for=""  class="text-white">Address</label>
-                                                    </div>
-                                                    <div class="col">
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                    </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                                <div class="form-container py-5">
+                                                    <form action="">
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for="old-password"  class="text-white">Old Password</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <input type="password" class="password w-100" id="old-password" name="old-password">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for="new-password"  class="text-white">New Password</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <input type="password" class="password w-100" id="new-password" name="password">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3">
+                                                                <label for="confirm-password"  class="text-white">Confirm Password</label>
+                                                            </div>
+                                                            <div class="col edit-input-wrap">
+                                                                <input type="password" class="password w-100" id="confirm-password" name="confirm-password">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mb-3">
+                                                            <div class="col-3"></div>
+                                                            <div class="col">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input show-pass-btn shadow-none" type="checkbox" value="" id="flexCheckChecked">
+                                                                    <label class="form-check-label text-white" for="flexCheckChecked">
+                                                                        Show Password
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col d-flex justify-content-end">
+                                                                <button type="submit" class="btn btn-secondary">Cancel</button>
+                                                                <button type="submit" class="btn btn-primary profile-edit-btn ms-3">Submit</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </div>
-                                                <div class="row mb-3">
-                                                    <div class="col-3">
-                                                        <label for=""  class="text-white ">Email</label>
-                                                    </div>
-                                                    <div class="col">
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col d-flex justify-content-end">
-                                                        <button type="submit" class="btn btn-secondary">Sign in</button>
-                                                        <button type="submit" class="btn btn-primary ms-3">Sign in</button>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -279,5 +339,17 @@
     <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
     <!-- Custom js -->
     <script src="./assets/js/main.js"></script>
+
+    <script>
+        $(function(){
+            $('.show-pass-btn').on('change', function () {
+                if($(this).is(':checked')){
+                    return $('input:password').attr('type', 'text');
+                }else{
+                    return $('input:text').attr('type', 'password');
+                }
+            })
+        })
+    </script>
 </body>
 </html>
